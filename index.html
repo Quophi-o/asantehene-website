@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Asantehene Lands Secretariat</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+                margin: 0;
+                background-color: #013220;
+                font-size: 1.1em;
+                line-height: 1.6;
+            }
+
+            header {
+                background-color: #d4af37;
+                color: black;
+                padding: 20px;
+                text-align: center;
+            }
+            
+            nav{
+               background-color: #000;
+               display: flex;
+               flex-wrap: wrap;
+               justify-content: center;
+            }
+            nav a {
+                color: #d4af37;
+                padding: 12px 16px;
+                text-decoration: none;
+                font-size: 1em;
+            }
+            nav a:hover {
+                background-color: #006400;
+                color: black;
+            }
+            h2{
+                color: #d4af37;
+            }
+            .image-row{
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+                gap: 10px;
+                padding: 15px;
+                overflow-x: auto;
+            }
+            .image-row img{
+                width: 18%;
+                height: auto;
+                border-radius: 8px;
+                object-fit: cover;
+                box-shadow: 0 0 5px
+                rgba(0,0,0,0.5);
+                cursor: pointer;
+                transition: transform 0.2s 
+                ease;
+            }
+            .image-row img:hover {
+                transform: scale(1.05);
+            }
+            @media screen and (max-width: 600px) {
+                .image-row {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+                .image-row img {
+                    width: 45%;
+                    margin-bottom: 10px;
+                }
+            }
+
+            section {
+                padding: 20px;
+                width: 90%;
+                max-width: 800px;
+                margin: auto;
+            }
+
+            footer {
+                background-color: gold;
+                color: black;
+                text-align: center;
+                padding: 15px;
+                margin-top: 40px;
+            }
+            #lightbox {
+                display: none;
+                position: fixed;
+                z-index: 9999;
+                top: 0; left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.8);
+                justify-content: center;
+                align-items: center;
+            }
+            #lightbox img {
+                max-width: 90%;
+                max-height: 90%;
+                border: 5px solid gold;
+                border-radius: 10px;
+            }
+
+            form {
+                background-color: black;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }
+            
+            form input, form textarea {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid gold;
+                border-radius: 4px;
+                font-size: 1em;
+            }
+            form button {
+                background-color: gold;
+                color: green;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 1em;
+            }
+            form button:hover {
+                background-color: gold;
+            }
+            iframe {
+                width: 100%;
+                min-height: 700px;
+                border: 2px solid #d4af37;
+            }
+            ul.bold-list> li {
+                font-weight: bold;
+                margin-bottom: 1em;
+                color: #d4af37;
+            }
+            ul.bold-list> li {
+                font-weight: normal;
+                margin: 0.5em 0 0 0;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Asantehene Lands Secretariat</h1>
+            <p>Custodianship | Trust | Service</p>
+        </header>
+        
+        <div class="image-row">
+        <img 
+        src="A.jpg"
+        onclick="openlightbox(this.src)"
+        alt="Image 1">
+        <img
+        src="LAN.jpg"
+        onclick="openlightbox(this.src)"
+        alt="Image 2">
+        <img
+        src="H.jpg"
+        onclick="openlightbox(this.src)"
+        alt="Image 3">
+        <img
+        src="E.jpg"
+        onclick="openlightbox(this.src)"
+        alt="Image 4">
+        <img
+        src="n.jpg"
+        onclick="openlightbox(this.src)"
+        alt="Image 5">
+        </div>
+        <div id="lightbox"
+        onclick="closelightbox()">
+        <img id="lightbox-img" src=""
+        alt="Zoomed image">
+</div>
+        <nav>
+            <a href="#about">About Us</a>
+            <a href="#service">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="#enquiries">Online Enquiries</a>
+        </nav>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>The Asantehene Lands Secretariat is a public office in Kumasi, Ghana,
+                responsible for managing and administering stool lands under the 
+                Asantehene, Otumfuo Osei Tutu II. We handle land-related matters for the 
+                Asante traditional area, including land acquisition, documentation, and
+                dispute resolution
+            </p>
+        </section>
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul class="bold-list">
+                <lI>Land Acquisition and Documentation
+                    <p>The secretariat handles processes related to acquiring land form
+                        the Asantehene, including documentation, registration and ensuring 
+                        proper land transactions
+                    </p>
+                </li>
+                <li>Dispute Resolution and Arbitration<p>We play a role in resolving land disputes 
+                    within the Asante traditional area.
+                </p>
+                </li>
+                <li>Information and Consultation<p>The Secretariat provides information and consultations
+                    to the public on land-related matters, and these services are often free.
+                </p></li>
+                <li>Land Use Planning<p>We contribute to the sustainable and judicious use of land within the Asante 
+                    traditional area, ensuring development aligns with national goals.
+                </p></li>
+                <li>Engaging Stakeholders<p>The Secretariat collabrates with traditional authorities, landowners, and 
+                    government agencies to manage land effectively.
+                </p></li>
+                <li>Monitoring and Reporting<p>We prepare reports on operations and activities, providing information to the Asantehene, land-owning groups,
+                    and other stakeholders
+                </p></li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <P>Location: Manhyia Palace,
+                Kumasi, Ghana.
+            </P>
+            <p>Email:info@asantehenelands.org</p>
+        </section>
+        <section id="enquiries">
+            <h2>Online Enquiries</h2>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSclOjiOlRn5nhWQdvYFdsUhsylXjsW53qHrn9Hsw2gIW6gZ1A/viewform?embedded=true" width="700" height="520" frameborder="0" 
+            marginheight="0" marginwidth="0">Loading…</iframe>
+            <p><a href="https://forms.gle/Qgr15GWr7grF7s3L9"target="_blank">Click here to fill out the forms
+                if it doesn't appear            
+            </a></p>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Asantehene Lands Secretariat.
+                All Rights Reserved.
+            </p>
+        </footer>
+
+        <script>
+            function openlightbox(src) {
+                document.getElementById('lightbox-img').src = src;
+                document.getElementById('lightbox').
+                style.display = 'flex';
+            }
+            function closelightbox() {
+                document.getElementById('lightbox').
+                style.display = 'none';
+            }
+        </script>
+    </body>
+</html>
